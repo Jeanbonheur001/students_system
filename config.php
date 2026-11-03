@@ -12,10 +12,10 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 // ---- Database settings (XAMPP / WAMP defaults) ----
-const DB_HOST    = 'localhost';
-const DB_USER    = 'root';
-const DB_PASS    = '';
-const DB_NAME    = 'practice_db';
+define('DB_HOST', getenv('DB_HOST') ?: 'localhost');
+define('DB_USER', getenv('DB_USER') ?: 'root');
+define('DB_PASS', getenv('DB_PASS') ?: '');
+define('DB_NAME', getenv('DB_NAME') ?: 'practice_db');   
 const DB_CHARSET = 'utf8mb4';
 
 // ---- Application settings ----
